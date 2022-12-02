@@ -11,7 +11,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     environment: 
-      - BASE_URL=$${BASE_URL_JP}
+      - BASE_URL=$${BASE_URL}
     volumes:
       - '.:/app'
       - /app/.next

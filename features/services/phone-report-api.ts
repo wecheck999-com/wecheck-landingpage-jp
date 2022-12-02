@@ -7,7 +7,7 @@ class phoneReportApi {
         console.log('payload',payload)
         return axiosClient({
             method: 'get',
-            url:`/api/v1/phonesearch`,
+            url:`/api/v1/phonesearchjp`,
             params: {
                 page: payload.page,
                 limit:payload.limit
@@ -17,17 +17,17 @@ class phoneReportApi {
     getSearchPhoneNumber(payload:ISearchPhonePayload) {
         return axiosClient({
             method: 'get',
-            url:`/api/v1/phonesearch/search/${payload.phoneNumber}`,
+            url:`/api/v1/phonesearchjp/search/${payload.phoneNumber}`,
             params: {
                 page: payload.page,
                 limit:payload.limit
             }
         })
     }
-    updatePhoneSearch(payload:any) {
+    updatephonesearchjp(payload:any) {
         return axiosClient({
             method: 'put',
-            url:`/api/v1/phonesearch/${payload.phoneNumber}`,
+            url:`/api/v1/phonesearchjp/${payload.phoneNumber}`,
             data:payload
         })
     }
@@ -40,21 +40,21 @@ class phoneReportApi {
     getDetailPhoneNumber(payload:IDetailPhoneNumber){
         return axiosClient({
             method: 'get',
-            url:`api/v1/phonesearch/${payload.id}`,
+            url:`api/v1/phonesearchjp/${payload.id}`,
         })
     }
 
     createChartPhoneNumber(payload:any){
         return axiosClient({
             method: 'post',
-            url:`api/v1/phonechart`,
+            url:`api/v1/phonechartjp`,
             data:payload
         })
     }
     getListCommentPhone(payload:ISearchPhoneCommentPayload){
         return axiosClient({
             method: 'get',
-            url:`api/v1/phonecomment/search/${payload.phoneSearchId }`,
+            url:`api/v1/phonecommentjp/search/${payload.phoneSearchId }`,
             params: {
                 page: payload.page,
                 limit:payload.limit
@@ -64,7 +64,7 @@ class phoneReportApi {
     createCommentPhone(payload:IPayloadComment){
         return axiosClient({
             method: 'post',
-            url:`api/v1/phonecomment`,
+            url:`api/v1/phonecommentjp`,
             data:payload
         })
     }

@@ -145,7 +145,7 @@ const AppReport: NextPageWithLayout = () => {
             <Row gutter={[16, 16]}>
               <Col md={12}>
                 <SearchFormItemWrapper>
-                  <span className='label'>Tìm app: </span>
+                  <span className='label'>アプリを探す: </span>
                   {/* <Select
                                         placeholder="Đầu số"
                                         style={{ width: 120, marginRight: 10 }}
